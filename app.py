@@ -34,3 +34,6 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
+    app.logger.addHandler(logging.StreamHandler(sys.stdout))
+    app.logger.setLevel(logging.ERROR)
+
