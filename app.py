@@ -6,6 +6,10 @@ import pickle
 app = Flask(__name__, template_folder='templates')
 model = pickle.load(open('model.pkl', 'rb'))
 
+app.logger.addHandler(logging.StreamHandler(sys.stdout))
+app.logger.setLevel(logging.ERROR)
+
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -34,6 +38,4 @@ def predict():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    app.logger.addHandler(logging.StreamHandler(sys.stdout))
-    app.logger.setLevel(logging.ERROR)
-
+    
