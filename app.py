@@ -10,6 +10,7 @@ handler = logging.StreamHandler(sys.stdout)
 root.addHandler(handler)
 
 app = Flask(__name__, template_folder='templates')
+app.config['EXPLAIN_TEMPLATE_LOADING'] = True
 model = pickle.load(open('model.pkl', 'rb'))
 
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
