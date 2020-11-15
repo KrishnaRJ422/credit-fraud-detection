@@ -1,0 +1,73 @@
+<!index html>
+	<html >
+	<!--From https://codepen.io/frytyler/pen/EGdtg-->
+	<head>
+	  <meta charset="UTF-8">
+	  <title>ML API</title>
+	  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	  
+	</head>
+	
+
+	<body>
+	 <div class="login">
+		<h1 style="color:SlateBlue"><b><center> Predict credit card transaction fradulency </center></b></h1>
+		
+		<img src="C:/Users/krish/Downloads/credit fraud logo.png" alt="credit fraud detection" style="width:128px;height:128px;" >
+		 
+		<h2 style="color:MediumSeaGreen;"> Please enter input values </h2>
+
+	     <!-- Main Input For Receiving Query to our ML -->
+	    <form action="{{ url_for('predict')}}"method="post">
+	    	<input type="number" step="any"  name="V1" placeholder="V1" required="required" />
+	    	<input type="number" step="any"  name="V2" placeholder="V2" required="required" />
+	    	<input type="number" step="any"  name="V3" placeholder="V3" required="required" />
+	    	<input type="number" step="any"  name="V4" placeholder="V4" required="required" />
+	    	<input type="number" step="any"  name="V5" placeholder="V5" required="required" />
+	    	<input type="number" step="any"  name="V6" placeholder="V6" required="required" />
+	    	<input type="number" step="any"  name="V7" placeholder="V7" required="required" />
+	    	<input type="number" step="any"  name="V8" placeholder="V8" required="required" />
+	    	<input type="number" step="any"  name="V9" placeholder="V9" required="required" />
+	    	<input type="number" step="any"  name="V10" placeholder="V10" required="required" />
+	    	<input type="number" step="any"  name="V11" placeholder="V11" required="required" />
+	    	<input type="number" step="any"  name="V12" placeholder="V12" required="required" />
+	    	<input type="number" step="any"  name="V13" placeholder="V13" required="required" />
+	    	<input type="number" step="any"  name="V14" placeholder="V14" required="required" />
+	    	<input type="number" step="any"  name="V15" placeholder="V15" required="required" />
+	    	<input type="number" step="any"  name="V16" placeholder="V16" required="required" />
+	    	<input type="number" step="any"  name="V17" placeholder="V17" required="required" />
+	    	<input type="number" step="any"  name="V18" placeholder="V18" required="required" />
+	    	<input type="number" step="any"  name="V19" placeholder="V19" required="required" />
+	    	<input type="number" step="any"  name="V20" placeholder="V20" required="required" />
+	    	<input type="number" step="any"  name="V21" placeholder="V21" required="required" />
+	    	<input type="number" step="any"  name="V22" placeholder="V22" required="required" />
+	    	<input type="number" step="any"  name="V23" placeholder="V23" required="required" />
+	    	<input type="number" step="any"  name="V24" placeholder="V24" required="required" />
+	    	<input type="number" step="any"  name="V25" placeholder="V25" required="required" />
+	    	<input type="number" step="any"  name="V26" placeholder="V26" required="required" />
+	    	<input type="number" step="any"  name="V27" placeholder="V27" required="required" />
+	    	<input type="number" step="any"  name="V28" placeholder="V28" required="required" />
+	    		<input type="number" step="any"  name="Amount" placeholder="Amount" required="required" />
+	
+       <button type="submit" class="btn btn-primary btn-block btn-lg">Predict</button>
+	<button type="reset">Reset the form</button><br><br>
+	
+
+	    </form>
+	
+
+	   <br>
+	   <br>
+	   {{ prediction_text }}
+	
+
+	 </div>
+	
+
+	
+	</body>
+	</html>
+
