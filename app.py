@@ -6,7 +6,7 @@ import sys
 import logging
 
 root = logging.getLogger()
-handler = logging.StreamHandler(sys.stdout))
+handler = logging.StreamHandler(sys.stdout)
 root.addHandler(handler)
 
 app = Flask(__name__, template_folder='templates')
