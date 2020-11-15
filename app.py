@@ -2,6 +2,12 @@ import numpy as np
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
 import pickle
+import sys
+import logging
+
+root = logging.getLogger()
+handler = logging.StreamHandler(sys.stdout))
+root.addHandler(handler)
 
 app = Flask(__name__, template_folder='templates')
 model = pickle.load(open('model.pkl', 'rb'))
