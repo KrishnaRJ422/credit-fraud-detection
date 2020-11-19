@@ -55,6 +55,10 @@ y_test1.shape
 print('train dataset shape {}'.format(Counter(y_train1)))
 print('test dataset shape {}'.format(Counter(y_test1)))
 
+sc=StandardScaler().fit(X_train1)
+X_train1=sc.transform(X_train1)
+X_test1=sc.transform(X_test1)
+
 from xgboost import XGBClassifier
 
 classifier = XGBClassifier(learning_rate=0.03,n_estimators=2400,num_classes=2,n_jobs=2,objective='binary:logistic',model_class_name='XGBoostGBMModel',random_state=1234,ensemble_level=3,seed=1234,nfolds=5,time_tolerance=2,score_f_name='f1',eval_metric='auc',booster='gbtree')
