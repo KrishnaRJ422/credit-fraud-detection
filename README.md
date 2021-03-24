@@ -1,6 +1,6 @@
 # Real time credit card fraud detection api
 
-Credit card fraud detection using XGBoost method in python which is deployed to cloud using heroku, flask.
+Automated Credit card fraud detection application using XGBoost method in python which is deployed to cloud using heroku, flask.
 
 Link to comparative study: https://github.com/KrishnaRJ422/credit-card-fraud-detection
 
