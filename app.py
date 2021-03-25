@@ -35,9 +35,9 @@ def predict():
     output = round(prediction[0], 2)
     
     if output==1:
-        return render_template('index.html', prediction_text='Transaction seems to be fradulent')
+        return render_template('index.html', prediction_text='Transaction seems to be fraudulent')
     elif output==0:
-        return render_template('index.html', prediction_text='Transaction seems to be non-fraudelent')
+        return render_template('index.html', prediction_text='Transaction seems to be non-fraudulent')
     else:
         return render_template('index.html', prediction_text='Please enter input values') 
      
